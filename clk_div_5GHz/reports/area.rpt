@@ -1,0 +1,47 @@
+ 
+****************************************
+Report : area
+Design : dividerblock
+Version: S-2021.06-SP5-5
+Date   : Tue Aug 27 23:16:45 2024
+****************************************
+
+Library(s) Used:
+
+    GF22FDX_SC8T_104CPP_BASE_CSC24L_SSG_0P72V_0P00V_0P00V_0P00V_M40C (File: /KSRC_lab_share/GF22NMFDSOI/dbs/24lvt/GF22FDX_SC8T_104CPP_BASE_CSC24L_SSG_0P72V_0P00V_0P00V_0P00V_M40C_ccs.db)
+    GF22FDX_SC8T_104CPP_BASE_CSC28L_SSG_0P72V_0P00V_0P00V_0P00V_M40C (File: /KSRC_lab_share/GF22NMFDSOI/dbs/28lvt/GF22FDX_SC8T_104CPP_BASE_CSC28L_SSG_0P72V_0P00V_0P00V_0P00V_M40C_ccs.db)
+
+Number of ports:                           26
+Number of nets:                            72
+Number of cells:                           60
+Number of combinational cells:             39
+Number of sequential cells:                18
+Number of macros/black boxes:               0
+Number of buf/inv:                         10
+Number of references:                       3
+
+Combinational area:                 10.782720
+Buf/Inv area:                        1.331200
+Noncombinational area:              27.555840
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                    38.338560
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ---------------------
+dividerblock                        38.3386    100.0    0.0000     0.0000  0.0000  dividerblock
+d12                                  7.9872     20.8    1.8637     6.1235  0.0000  CLKDivider_Div12_1
+d80                                 16.6400     43.4    4.3930    12.2470  0.0000  CLKDivider_Div80alt_1
+d9                                  13.7114     35.8    4.5261     9.1853  0.0000  CLKDivider_Div9alt_1
+--------------------------------  ---------  -------  --------  ---------  ------  ---------------------
+Total                                                  10.7827    27.5558  0.0000
+
+1
