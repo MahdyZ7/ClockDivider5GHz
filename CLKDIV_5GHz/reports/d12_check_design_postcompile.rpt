@@ -1,0 +1,20 @@
+ 
+****************************************
+check_design summary:
+Version:     S-2021.06-SP5-5
+Date:        Wed Aug 28 16:48:36 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      6
+    Unconnected ports (LINT-28)                                     6
+--------------------------------------------------------------------------------
+
+Warning: In design 'CLKDivider_Div9alt_0', port 'VDD' is not connected to any nets. (LINT-28)
+Warning: In design 'CLKDivider_Div9alt_0', port 'VSS' is not connected to any nets. (LINT-28)
+Warning: In design 'CLKDivider_Div12_0', port 'VDD' is not connected to any nets. (LINT-28)
+Warning: In design 'CLKDivider_Div12_0', port 'VSS' is not connected to any nets. (LINT-28)
+Warning: In design 'CLKDivider_Div80alt_0', port 'VDD' is not connected to any nets. (LINT-28)
+Warning: In design 'CLKDivider_Div80alt_0', port 'VSS' is not connected to any nets. (LINT-28)
+1

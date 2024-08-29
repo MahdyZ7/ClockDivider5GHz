@@ -1,0 +1,59 @@
+Loading db file '/usr/synopsys/syn/S-2021.06-SP5-5/libraries/syn/gtech.db'
+Loading db file '/usr/synopsys/syn/S-2021.06-SP5-5/libraries/syn/standard.sldb'
+  Loading link library 'GF22FDX_SC8T_104CPP_BASE_CSC20L_SSG_0P72V_0P00V_0P00V_0P00V_M40C'
+  Loading link library 'GF22FDX_SC8T_104CPP_BASE_CSC20SL_SSG_0P72V_0P00V_0P00V_0P00V_M40C'
+  Loading link library 'GF22FDX_SC8T_104CPP_BASE_CSC24L_SSG_0P72V_0P00V_0P00V_0P00V_M40C'
+  Loading link library 'GF22FDX_SC8T_104CPP_BASE_CSC24SL_SSG_0P72V_0P00V_0P00V_0P00V_M40C'
+  Loading link library 'GF22FDX_SC8T_104CPP_BASE_CSC28L_SSG_0P72V_0P00V_0P00V_0P00V_M40C'
+  Loading link library 'GF22FDX_SC8T_104CPP_BASE_CSC28SL_SSG_0P72V_0P00V_0P00V_0P00V_M40C'
+  Loading link library 'IN22FDX_R1PH_NFHN_W00256B046M02C256_104cpp_SSG_0P720V_0P000V_0P000V_M40C'
+  Loading link library 'IN22FDX_R1PH_NFHN_W00256B128M02C256_104cpp_SSG_0P720V_0P000V_0P000V_M40C'
+  Loading link library 'IN22FDX_S1D_NFRG_W04096B032M04C128_104cpp_SSG_0P720V_0P720V_0P000V_0P000V_M40C'
+  Loading link library 'IN22FDX_GPIO18_10M19S20PS_SSG_0P72_1P08_M40'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (dividerblock)
+Elaborated 1 design.
+Current design is now 'dividerblock'.
+Information: Building the design 'Div9'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Div9 line 19 in file
+		'./Div9.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mid3_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      mid4_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      mid2_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      mid1_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (Div9)
+Information: Building the design 'Div12'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Div12 line 11 in file
+		'./Div12.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      div12_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |   3   |  Y  | Y  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (Div12)
+Information: Building the design 'Div80alt'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Div80alt line 14 in file
+		'./Div80alt.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      div4_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      div80_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     count5_reg      | Flip-flop |   3   |  Y  | Y  | N  | N  | N  | N  | N  |
+|      div8_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     count8_reg      | Flip-flop |   3   |  Y  | Y  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (Div80alt)
+1

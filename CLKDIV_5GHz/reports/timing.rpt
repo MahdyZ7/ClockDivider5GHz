@@ -1,0 +1,33 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : dividerblock
+Version: S-2021.06-SP5-5
+Date   : Wed Aug 28 16:48:36 2024
+****************************************
+
+Operating Conditions: SSG_0P72V_0P00V_0P00V_0P00V_M40C   Library: GF22FDX_SC8T_104CPP_BASE_CSC20L_SSG_0P72V_0P00V_0P00V_0P00V_M40C
+Wire Load Model Mode: top
+
+  Startpoint: d9/t2_reg (falling edge-triggered flip-flop)
+  Endpoint: div9 (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  d9/t2_reg/CLK (SC8T_DFFNQX1_CSC28L)                     0.00       0.00 f
+  d9/t2_reg/Q (SC8T_DFFNQX1_CSC28L)                     129.85     129.85 r
+  d9/U15/Z (SC8T_OA22IA1A2X1_MR_CSC28L)                  52.13     181.98 r
+  d9/div9 (CLKDivider_Div9alt_1)                          0.00     181.98 r
+  div9 (out)                                              0.00     181.98 r
+  data arrival time                                                181.98
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

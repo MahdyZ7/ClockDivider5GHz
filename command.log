@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version S-2021.06-SP5-5 for linux64 -- Sep 20, 2022
-#@ # Date:   Tue Aug 27 22:38:18 2024
+#@ # Date:   Wed Aug 28 20:00:52 2024
 #@ # Run by: yasin@ksrc5.kunet.ae
 #@ 
 
@@ -8499,8 +8499,8 @@ source /usr/synopsys/syn/S-2021.06-SP5-5/admin/setup/.synopsys_dc.setup
 
 #@ # -- End source /usr/synopsys/syn/S-2021.06-SP5-5/admin/setup/.synopsys_dc.setup
 
-source CLKDIV_5GHZ.tcl
-#@ # -- Starting source CLKDIV_5GHZ.tcl
+source CLKDIV_5GHZ_alt.tcl
+#@ # -- Starting source CLKDIV_5GHZ_alt.tcl
 
 #@ ####################################################################
 #@ ## Load SETUP 
@@ -8545,7 +8545,7 @@ source CLKDIV_5GHZ.tcl
 #@ 
 #@ 
 #@ set reAnalyzeRTL "TRUE"
-#@ set TRIAL_DIR "clk_div_5GHz"
+#@ set TRIAL_DIR "CLKDIV_5GHz_alt"
 #@ ## name of top module -.-
 #@ set DESIGN_NAME "dividerblock"
 #@ 
@@ -8572,8 +8572,8 @@ source CLKDIV_5GHZ.tcl
 #@ ## ANALYZE THE RTL CODE or Read the GTECH 
 #@ ####################################################################
 #@ ## name of files to synthasise -.-
-#@ analyze -format verilog { ./Div9alt.v ./Div12.v ./dividerblock.v \
-#@ 		     ./Div80alt.v}
+#@ analyze -format verilog { ./Div9.v ./Div12.v \
+#@ 		     ./Div80.v ./dividerblock.v}
 #@ 
 #@ #read_sverilog /eda_work/Asif/FLL_final_rtl/gf22_FLL.sv
 #@ ####################################################################
@@ -8581,9 +8581,9 @@ source CLKDIV_5GHZ.tcl
 #@ ####################################################################
 #@ 
 #@ elaborate ${DESIGN_NAME} -work work > ${TRIAL_DIR}/reports/d00_elaborate.log
-#@ check_design> ${TRIAL_DIR}/reports/d01_check_design_postElab.rpt
-#@ ## name of current desin -.-
-#@ current_design dividerblock  #change name
+#@ check_design > ${TRIAL_DIR}/reports/d01_check_design_postElab.rpt
+#@ ## name of current desin (change it based on top block)
+#@ current_design dividerblock
 #@ write -format verilog -hier -o ./${TRIAL_DIR}/unmapped/${DESIGN_NAME}_chip_unmapped.v
 #@ write -format ddc -hier -o ./${TRIAL_DIR}/unmapped/${DESIGN_NAME}_chip_unmapped.ddc ${DESIGN_NAME}
 #@ 
@@ -8625,8 +8625,22 @@ source CLKDIV_5GHZ.tcl
 #@ ## ADD CONSTRAINTS
 #@ ####################################################################
 #@ set_app_var hdlin_sv_enable_rtl_attributes true
-#@ ## put constrains file -.-
-#@ source -echo -verbose ./myconstraints.sdc     > ${TRIAL_DIR}/reports/d05_constr_clk.rpt # change Constrain
+#@ ## put constrains file (change it based on your constrain file)
+#@ source -echo -verbose ./myconstraints.sdc     > ${TRIAL_DIR}/reports/d05_constr_clk.rpt
+#@ # -- Starting source ./myconstraints.sdc
+
+#@ ###################################################################
+#@ 
+#@ # Created by write_sdc on Thu Dec 22 14:13:13 2022
+#@ 
+#@ ###################################################################
+#@ set sdc_version 2.1
+#@ 
+#@ set_units -time ps 
+#@ create_clock -name  CLK -period 200
+#@ 
+#@ # -- End source ./myconstraints.sdc
+
 #@ 
 #@ ####################################################################
 #@ ## INSERT CLK GATING CELLS
@@ -8668,7 +8682,8 @@ source CLKDIV_5GHZ.tcl
 #@ define_name_rules fixbackslashes -allowed "A-Za-z0-9_" -first_restricted "\\" -remove_chars
 #@ change_names -rule fixbackslashes -h
 #@ sh mkdir -p ./${TRIAL_DIR}/netlists
-#@ write -format verilog -hier -o ./${TRIAL_DIR}/netlists/BIGDIV_5GHz.v # Change name
+#@ # Change name
+#@ write -format verilog -hier -o ./${TRIAL_DIR}/netlists/BIGDIV_5GHz.v 
 #@ 
 #@ ####################################################################
 #@ ## REPORTS
@@ -46725,5 +46740,6 @@ source CLKDIV_5GHZ.tcl
 
 #@ gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {LeafCells}
 
-#@ # -- End source CLKDIV_5GHZ.tcl
+#@ # -- End source CLKDIV_5GHZ_alt.tcl
 
+exit

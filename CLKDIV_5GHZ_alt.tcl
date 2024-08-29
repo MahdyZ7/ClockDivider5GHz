@@ -10,7 +10,7 @@ source ./design_setup.tcl
 
 
 set reAnalyzeRTL "TRUE"
-set TRIAL_DIR "CLKDIV_5GHz"
+set TRIAL_DIR "CLKDIV_5GHz_alt"
 ## name of top module -.-
 set DESIGN_NAME "dividerblock"
  
@@ -37,8 +37,8 @@ sh date > ${TRIAL_DIR}/lock_date
 ## ANALYZE THE RTL CODE or Read the GTECH 
 ####################################################################
 ## name of files to synthasise -.-
-analyze -format verilog { ./Div9alt.v ./Div12.v \
-		     ./Div80alt.v ./dividerblock.v}
+analyze -format verilog { ./Div9.v ./Div12.v \
+		     ./Div80.v ./dividerblock.v}
 
 #read_sverilog /eda_work/Asif/FLL_final_rtl/gf22_FLL.sv
 ####################################################################
